@@ -30,6 +30,16 @@ var questions = [
 inquirer.prompt(questions)//prompt takes an array of objects that contain your questions
 .then(function(response){
     new Manager(response.managerName,response.managerEmail)
-    new Employee(response.name,response.email,response.otherStuff)
+
+    if(addEmployee){
+        inquirer.prompt({
+            type:"list",
+            message:"What kind of employee do you want to add?",
+            choices:["Intern","Engineer","Manager","Standard Employee"],
+            name:"choice"
+        }).then(function(response){
+            //so on and so forth for internquestions and engineerquestions
+        })
+    }
 })
 // you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
