@@ -4,26 +4,32 @@
 
 const Manager = require("./manager.js");
 const Engineer = require("./engineer.js");
-const Intern = require("./intern.js");
+const Intern = require("./lib/intern.js");
 
-// parent class "Employee"
-class Employee{
-    // general employee attributes and methods
-}
+const inquirer = require("inquirer");
 
-// child class "Manager"
-class Manager extends Employee {
+var questions = [
+    {
+        type:"input",
+        message:"What is the manager's name?",
+        name:"managerName"
+    },
+    {
+        type:"input",
+        message:"What is the manager's email?",
+        name: "managerEmail",
+    },
+    {
+        type:"confirm",
+        message:"would you like to add an employee or intern at this time?",
+        name:"addEmployee"
+    }
 
-}
+]
 
-
-// child class "Engineer"
-class Engineer extends Employee {
-    
-}
-
-
-// child class "Intern"
-class Intern extends Employee {
-    
-}
+inquirer.prompt(questions)//prompt takes an array of objects that contain your questions
+.then(function(response){
+    new Manager(response.managerName,response.managerEmail)
+    new Employee(response.name,response.email,response.otherStuff)
+})
+// you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
