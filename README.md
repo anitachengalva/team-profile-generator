@@ -3,7 +3,7 @@
 
 ## Description
 
-The goal of this application is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
+The goal of this application is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Unit tests are ran utilizing the [Jest](https://www.npmjs.com/package/jest) Node.js package, and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user.
 
 
 ## Deployed Link
