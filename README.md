@@ -3,13 +3,13 @@
 
 ## Description
 
+The goal of this application is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 
 
+## Deployed Link
 
-## Deployed Link(s)
-
-This application is deployed through [Heroku](https://www.heroku.com/what).
-> link
+This application is not deployed, so below is a link to the walkthrough video.
+> [Walkthrough](#screenshots-and-walkthrough)
 
 
 ## Table of Contents
@@ -25,9 +25,9 @@ This application is deployed through [Heroku](https://www.heroku.com/what).
 ## User Story
 
 ```md
-AS A ____________
-I WANT _______________
-SO THAT _____________
+AS A manager
+I WANT to generate a webpage that displays my team's basic info
+SO THAT I have quick access to their emails and GitHub profiles
 ```
 
 
