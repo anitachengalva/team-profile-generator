@@ -43,6 +43,7 @@ In order to run this application, you will want to `git clone` this repository s
 > [Node.js](https://nodejs.org/en/)
 > - [Jest npm](https://www.npmjs.com/package/jest)
 > - [Inquirer npm](https://www.npmjs.com/package/inquirer)
+> - [dotenv npm](https://www.npmjs.com/package/dotenv)
 
 
 ## Screenshots and Walkthrough

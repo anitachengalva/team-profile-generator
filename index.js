@@ -1,12 +1,16 @@
-// javascript
 // utilize node, jest, and inquirer
-
+const fs = require("fs");
+const inquirer = require("inquirer");
+const path = require("path");
 
 const Manager = require("./manager.js");
 const Engineer = require("./engineer.js");
 const Intern = require("./lib/intern.js");
 
-const inquirer = require("inquirer");
+const render = require("./src/templateBuilder");
+
+let employees = [];
+let idArray = [];
 
 var questions = [
     {
