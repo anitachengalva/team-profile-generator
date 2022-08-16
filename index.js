@@ -12,6 +12,7 @@ const render = require("./src/templateBuilder");
 let employees = [];
 let idArray = [];
 
+// prompts to gather employee information
 function addEmployee() {
   inquirer.prompt([
     {
@@ -36,6 +37,8 @@ function addEmployee() {
       choices: ["Manager", "Engineer", "Intern"],
     },
   ]).then(
+    // prompts vary depending on which role is selected
+    // unique questions per role
     function ({ name, id, email, role }) {
         switch (role) {
             case "Manager":
@@ -88,6 +91,7 @@ function addEmployee() {
   )
 }
 
+// loops back around if user wishes to add more employees
   function addNewEmployee() {
     inquirer.prompt ([
         {
