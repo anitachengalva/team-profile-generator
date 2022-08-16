@@ -15,20 +15,25 @@ let idArray = [];
 var questions = [
     {
         type:"input",
-        message:"What is the manager's name?",
-        name:"managerName"
+        message:"What is your name?",
+        name:"employeeName"
+    },
+    {
+        type:"number",
+        message:"What is your ID#?",
+        name:"employeeName"
     },
     {
         type:"input",
-        message:"What is the manager's email?",
-        name: "managerEmail",
+        message:"What is your email address?",
+        name:"employeeEmail"
     },
     {
-        type:"confirm",
-        message:"would you like to add an employee or intern at this time?",
-        name:"addEmployee"
+        type:"list",
+        message:"What is your role?",
+        name:"employeeRole",
+        choices: ["Manager", "Engineer", "Intern"]
     }
-
 ]
 
 inquirer.prompt(questions)//prompt takes an array of objects that contain your questions
