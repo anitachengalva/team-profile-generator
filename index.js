@@ -43,9 +43,23 @@ function addEmployee() {
   ]).then(
     function ({ name, id, email, role }) {
         switch (role) {
+            case "Manager":
+                inquirer.prompt
+                ([
+                    {
+                        type: "input",
+                        message: "What is your office number?",
+                        name: "office"
+                    },
+                ]).then (
+                    function ({ office }) {
+                        newManager(name, id, email, office)
+                        addEmployee();
+                    }
+                )
+                break
             case "Engineer":
             case "Intern":
-            case "Manager":
         }
     }
   )
