@@ -3,9 +3,9 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require("path");
 
-const Manager = require("./manager.js");
-const Engineer = require("./engineer.js");
-const Intern = require("./lib/intern.js");
+const newManager = require("./lib/manager.js");
+const newEngineer = require("./lib/engineer.js");
+const newIntern = require("./lib/intern.js");
 
 const render = require("./src/templateBuilder");
 
@@ -78,7 +78,7 @@ function addEmployee() {
                     },
                 ]).then (
                     function ({ school }) {
-                        newManager(name, id, email, school)
+                        newIntern(name, id, email, school)
                         addNewEmployee();
                     }
                 )
