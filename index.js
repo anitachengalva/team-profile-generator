@@ -70,6 +70,20 @@ console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
                 )
                 break
             case "Intern":
+                inquirer.prompt
+                ([
+                    {
+                        type: "input",
+                        message: "What is your school?",
+                        name: "school"
+                    },
+                ]).then (
+                    function ({ school }) {
+                        newManager(name, id, email, school)
+                        addNewEmployee();
+                    }
+                )
+                break
         }
     }
   )
