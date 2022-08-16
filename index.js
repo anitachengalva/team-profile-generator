@@ -13,26 +13,25 @@ let employees = [];
 let idArray = [];
 
 function addEmployee() {
-console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
   inquirer.prompt([
     {
       type: "input",
-      message: "What is your name?",
+      message: "What is the employee's name?",
       name: "name",
     },
     {
       type: "number",
-      message: "What is your ID#?",
+      message: "What is their ID#?",
       name: "id",
     },
     {
       type: "input",
-      message: "What is your email address?",
+      message: "What is their email address?",
       name: "email",
     },
     {
       type: "list",
-      message: "What is your role?",
+      message: "What is their role?",
       name: "role",
       choices: ["Manager", "Engineer", "Intern"],
     },
@@ -44,7 +43,7 @@ console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
                 ([
                     {
                         type: "input",
-                        message: "What is your office number?",
+                        message: "What is their office number?",
                         name: "officeNumber"
                     },
                 ]).then (
@@ -59,7 +58,7 @@ console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
                 ([
                     {
                         type: "input",
-                        message: "What is your GitHub?",
+                        message: "What is their GitHub?",
                         name: "github"
                     },
                 ]).then (
@@ -74,7 +73,7 @@ console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
                 ([
                     {
                         type: "input",
-                        message: "What is your school?",
+                        message: "What is their school?",
                         name: "school"
                     },
                 ]).then (
@@ -106,5 +105,5 @@ console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
         }
     )
   }
-  
+
 addEmployee();
