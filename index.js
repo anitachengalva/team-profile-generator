@@ -45,16 +45,30 @@ console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
                     {
                         type: "input",
                         message: "What is your office number?",
-                        name: "office"
+                        name: "officeNumber"
                     },
                 ]).then (
-                    function ({ office }) {
-                        newManager(name, id, email, office)
-                        addEmployee();
+                    function ({ officeNumber }) {
+                        newManager(name, id, email, officeNumber)
+                        addNewEmployee();
                     }
                 )
                 break
             case "Engineer":
+                inquirer.prompt
+                ([
+                    {
+                        type: "input",
+                        message: "What is your GitHub?",
+                        name: "github"
+                    },
+                ]).then (
+                    function ({ github }) {
+                        newEngineer(name, id, email, github)
+                        addNewEmployee();
+                    }
+                )
+                break
             case "Intern":
         }
     }
