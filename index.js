@@ -19,7 +19,7 @@ function welcome() {
 
 function start() {
   function addEmployee() {
-    var questions = [
+    inquirer.prompt([
       {
         type: "input",
         message: "What is your name?",
@@ -41,11 +41,11 @@ function start() {
         name: "role",
         choices: ["Manager", "Engineer", "Intern"],
       },
-    ];
+    ]);
 
 
 
-    
+
     // you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
   }
 
