@@ -13,41 +13,37 @@ let employees = [];
 let idArray = [];
 
 function welcome() {
-    console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
-    start();
-};
+  console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
+  start();
+}
 
-function start() {
-  function addEmployee() {
-    inquirer.prompt([
-      {
-        type: "input",
-        message: "What is your name?",
-        name: "name",
-      },
-      {
-        type: "number",
-        message: "What is your ID#?",
-        name: "id",
-      },
-      {
-        type: "input",
-        message: "What is your email address?",
-        name: "email",
-      },
-      {
-        type: "list",
-        message: "What is your role?",
-        name: "role",
-        choices: ["Manager", "Engineer", "Intern"],
-      },
-    ]);
+function addEmployee() {
+  inquirer.prompt([
+    {
+      type: "input",
+      message: "What is your name?",
+      name: "name",
+    },
+    {
+      type: "number",
+      message: "What is your ID#?",
+      name: "id",
+    },
+    {
+      type: "input",
+      message: "What is your email address?",
+      name: "email",
+    },
+    {
+      type: "list",
+      message: "What is your role?",
+      name: "role",
+      choices: ["Manager", "Engineer", "Intern"],
+    },
+  ]);
 
-
-
-
-    // you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
-  }
+  // you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
+}
 
 //   function addTeam() {}
 
@@ -55,4 +51,3 @@ function start() {
 
 //   function addEngineer() {}
 //   addManager();
-}
