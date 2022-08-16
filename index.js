@@ -87,13 +87,24 @@ console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
         }
     }
   )
-
-  // you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
 }
 
-//   function addTeam() {}
-
-//   function addIntern() {}
-
-//   function addEngineer() {}
-//   addManager();
+  function addNewEmployee() {
+    inquirer.prompt ([
+        {
+            type: "confirm",
+            message: "Would you like to add additional team members?",
+            name: "addNewEmployee"
+        },
+    ]).then (
+        function({ addNewEmployee }) {
+            if (addNewEmployee) {
+                addEmployee()
+            } else {
+                render();
+            }
+        }
+    )
+  }
+  
+addEmployee();
