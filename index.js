@@ -12,6 +12,11 @@ const render = require("./src/templateBuilder");
 let employees = [];
 let idArray = [];
 
+function welcome() {
+    console.log("\n" + "Welcome! Let's Build Your Team." + "\n");
+    start();
+};
+
 function start() {
   function addManager() {
     var questions = [
