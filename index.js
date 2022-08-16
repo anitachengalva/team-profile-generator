@@ -13,60 +13,56 @@ let employees = [];
 let idArray = [];
 
 function start() {
-function addManager() {
-var questions = [
-    {
-        type:"input",
-        message:"What is your name?",
-        name:"employeeName"
-    },
-    {
-        type:"number",
-        message:"What is your ID#?",
-        name:"employeeName"
-    },
-    {
-        type:"input",
-        message:"What is your email address?",
-        name:"employeeEmail"
-    },
-    {
-        type:"list",
-        message:"What is your role?",
-        name:"employeeRole",
-        choices: ["Manager", "Engineer", "Intern"]
-    }
-]
+  function addManager() {
+    var questions = [
+      {
+        type: "input",
+        message: "What is your name?",
+        name: "employeeName",
+      },
+      {
+        type: "number",
+        message: "What is your ID#?",
+        name: "employeeName",
+      },
+      {
+        type: "input",
+        message: "What is your email address?",
+        name: "employeeEmail",
+      },
+      {
+        type: "list",
+        message: "What is your role?",
+        name: "employeeRole",
+        choices: ["Manager", "Engineer", "Intern"],
+      },
+    ];
 
-inquirer.prompt(questions)//prompt takes an array of objects that contain your questions
-.then(function(response){
-    new Manager(response.managerName,response.managerEmail)
+    inquirer
+      .prompt(questions) //prompt takes an array of objects that contain your questions
+      .then(function (response) {
+        new Manager(response.managerName, response.managerEmail);
 
-    if(addEmployee){
-        inquirer.prompt({
-            type:"list",
-            message:"What kind of employee do you want to add?",
-            choices:["Intern","Engineer","Manager","Standard Employee"],
-            name:"choice"
-        }).then(function(response){
-            //so on and so forth for internquestions and engineerquestions
-        })
-    }
-})
-// you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
+        if (addEmployee) {
+          inquirer
+            .prompt({
+              type: "list",
+              message: "What kind of employee do you want to add?",
+              choices: ["Intern", "Engineer", "Manager", "Standard Employee"],
+              name: "choice",
+            })
+            .then(function (response) {
+              //so on and so forth for internquestions and engineerquestions
+            });
+        }
+      });
+    // you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
+  }
+
+  function addTeam() {}
+
+  function addIntern() {}
+
+  function addEngineer() {}
+  addManager();
 }
-
-function addTeam() {
-
-};
-
-function addIntern() {
-
-};
-
-function addEngineer() {
-
-};
-
-function addManager();
-};
