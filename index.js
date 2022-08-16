@@ -12,6 +12,8 @@ const render = require("./src/templateBuilder");
 let employees = [];
 let idArray = [];
 
+function start() {
+function addManager() {
 var questions = [
     {
         type:"input",
@@ -52,3 +54,19 @@ inquirer.prompt(questions)//prompt takes an array of objects that contain your q
     }
 })
 // you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
+}
+
+function addTeam() {
+
+};
+
+function addIntern() {
+
+};
+
+function addEngineer() {
+
+};
+
+function addManager();
+};
