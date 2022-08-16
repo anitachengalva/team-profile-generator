@@ -40,7 +40,15 @@ function addEmployee() {
       name: "role",
       choices: ["Manager", "Engineer", "Intern"],
     },
-  ]);
+  ]).then(
+    function ({ name, id, email, role }) {
+        switch (role) {
+            case "Engineer":
+            case "Intern":
+            case "Manager":
+        }
+    }
+  )
 
   // you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
 }
