@@ -1,16 +1,17 @@
 // utilize node, jest, and inquirer
 const fs = require("fs");
 const inquirer = require("inquirer");
-const path = require("path");
+// const path = require("path");
 
-const newManager = require("./lib/manager.js");
-const newEngineer = require("./lib/engineer.js");
-const newIntern = require("./lib/intern.js");
+const Employee = require("./lib/employee");
+const Manager = require("./lib/manager.js");
+const Engineer = require("./lib/engineer.js");
+const Intern = require("./lib/intern.js");
 
-const render = require("./src/templateBuilder");
+// const render = require("./src/templateBuilder");
 
-let employees = [];
-let idArray = [];
+// let employees = [];
+// let idArray = [];
 
 // prompts to gather employee information
 function addEmployee() {
