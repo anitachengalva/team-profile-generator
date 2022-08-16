@@ -18,27 +18,27 @@ function welcome() {
 };
 
 function start() {
-  function addManager() {
+  function addEmployee() {
     var questions = [
       {
         type: "input",
         message: "What is your name?",
-        name: "employeeName",
+        name: "name",
       },
       {
         type: "number",
         message: "What is your ID#?",
-        name: "employeeName",
+        name: "id",
       },
       {
         type: "input",
         message: "What is your email address?",
-        name: "employeeEmail",
+        name: "email",
       },
       {
         type: "list",
         message: "What is your role?",
-        name: "employeeRole",
+        name: "role",
         choices: ["Manager", "Engineer", "Intern"],
       },
     ];
@@ -64,10 +64,10 @@ function start() {
     // you need to build out all of the questions in a chain. starting with the manager, and then continuing to engineer and intern questions
   }
 
-  function addTeam() {}
+//   function addTeam() {}
 
-  function addIntern() {}
+//   function addIntern() {}
 
-  function addEngineer() {}
-  addManager();
+//   function addEngineer() {}
+//   addManager();
 }
