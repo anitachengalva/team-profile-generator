@@ -14,9 +14,7 @@ function render(employees){
             <h3 class="card-role">${employees.role}</h3>
             <ul class="card-details">Employee ID: ${employees.id}</ul>
             <ul class="card-details">Office Number: ${employees.officeNumber}</ul>
-            <ul class="card-details">School: ${employees.school}</ul>
             <ul class="card-details">Email: <a href="mailto:${employees.email}">${employees.email}</a></ul>
-            <ul class="card-details">GitHub: <a href="https://github.com/${employees.github}" target="_blank">${employees.github}</a></ul>
         </div>
         `
     }
