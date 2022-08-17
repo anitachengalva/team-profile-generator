@@ -71,7 +71,8 @@ function render(employees){
 </html>
     `
 
-    fs.writeFile('../dist/index.html',finalHTML)
+fs.writeFile('../dist/index.html', finalHTML)
+
 }
 
-module.exports=render
+module.exports = render;
