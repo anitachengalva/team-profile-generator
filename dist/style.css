@@ -58,3 +58,11 @@ a {
 a:hover {
     color: darkgray;
 }
+
+footer {
+    text-align: center;
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
