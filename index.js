@@ -1,7 +1,7 @@
 // utilize node, jest, and inquirer
 const fs = require("fs");
 const inquirer = require("inquirer");
-// const path = require("path");
+const path = require("path");
 
 const Employee = require("./lib/employee");
 const Manager = require("./lib/manager.js");
@@ -10,7 +10,7 @@ const Intern = require("./lib/intern.js");
 
 // const render = require("./src/templateBuilder");
 
-// let employees = [];
+let employees = [];
 // let idArray = [];
 
 // prompts to gather employee information
@@ -52,7 +52,8 @@ function addEmployee() {
                     },
                 ]).then (
                     function ({ officeNumber }) {
-                        newManager(name, id, email, officeNumber)
+                        let manager = new Manager(name, id, email, officeNumber)
+                        employees.push(manager)
                         addNewEmployee();
                     }
                 )
@@ -67,7 +68,7 @@ function addEmployee() {
                     },
                 ]).then (
                     function ({ github }) {
-                        newEngineer(name, id, email, github)
+                        new Engineer(name, id, email, github)
                         addNewEmployee();
                     }
                 )
@@ -82,7 +83,7 @@ function addEmployee() {
                     },
                 ]).then (
                     function ({ school }) {
-                        newIntern(name, id, email, school)
+                        new Intern(name, id, email, school)
                         addNewEmployee();
                     }
                 )
