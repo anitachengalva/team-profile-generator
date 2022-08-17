@@ -1,1 +1,15 @@
-/* utilize flexbox for profile cards */
+header {
+    color: gray;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+}
