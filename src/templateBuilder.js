@@ -1,17 +1,5 @@
 const fs = require('fs')
 
-let card = `
-<div>
-employeename here
-</div>`
-
-
-
-let finalHTML = `<body>
-
-${card}
-</body>`
-
 function render(employees){
     let cardStack = "";
 
@@ -22,7 +10,8 @@ function render(employees){
     </div>`
     }
 
-    let finalHTML = `
+    let finalHTML = 
+    `
     <!DOCTYPE html>
 
 <html>
@@ -32,21 +21,20 @@ function render(employees){
 
     <header>
         <h1>My Team </h1>
+        <h2>Employee Profile Cards</h2>
     </header>
 
     <body class="main-container">
-  
         <div class="cards">
-        ${cardStack}
-          
+            ${cardStack}
         </div>
-    
+        <footer>
+            <h4>2022 Anita Chengalva</h4>
+        </footer>
     <script src="index.js"></script>
     </body>
 </html>
-    <body>
-    ${cardStack}
-    </body>`
+    `
 
     fs.writeFile('../dist/index.html',finalHTML)
 }
