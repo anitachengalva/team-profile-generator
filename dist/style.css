@@ -5,14 +5,36 @@ header {
     margin: 50px;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: green;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 85%;
 }
 
 .card {
+    text-align: left;
+    margin: 10px;
+    padding: 10px 10px 30px 10px;
+    width: 300px;
+    background-color: lightgrey;
+    border: 2px solid lightblue;
+}
+
+.card h2, .card h3 {
     text-align: center;
-    background-color: aquamarine;
+}
+
+.card-details {
+    align-items: left;
 }
