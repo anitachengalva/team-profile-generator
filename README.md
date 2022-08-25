@@ -48,8 +48,8 @@ In order to run this application, you will want to `git clone` this repository s
 
 ## Screenshots and Walkthrough
 
-![Alt-txt-placeholder](path-placeholder)
-*caption*
+<a href="https://drive.google.com/file/d/1XzFq49xgRwoLjXwOWIMVUc-u92067j8O/view">![screenshot-of final-html-rendered](./assets/10-screenshot.jpg)
+*Tests passed, application sucessfully rendered*</a>
 </br>
 
 ## Contributors
