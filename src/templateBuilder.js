@@ -15,7 +15,8 @@ function render(employees){
             <ul class="card-details">Employee ID: ${employee.id}</ul>
             ${employee.officeNumber?`<ul class="card-details">Office Number: ${employee.officeNumber}</ul>`:""}
             <ul class="card-details">Email: <a href="mailto:${employee.email}">${employee.email}</a></ul>
-            ${/**add schools and other stuff here */""}
+            ${employee.school?`<ul class="card-details">School: ${employee.school}</ul>`:""}
+            ${employee.github?`<ul class="card-details">GitHub: <a href="https://github.com/${employee.github}">${employee.github}</a></ul>`:""}
         </div>
         `
     }
