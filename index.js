@@ -68,7 +68,8 @@ function addEmployee() {
                     },
                 ]).then (
                     function ({ github }) {
-                        new Engineer(name, id, email, github)
+                        let engineer = new Engineer(name, id, email, github)
+                        employees.push(engineer)
                         addNewEmployee();
                     }
                 )
@@ -83,7 +84,8 @@ function addEmployee() {
                     },
                 ]).then (
                     function ({ school }) {
-                        new Intern(name, id, email, school)
+                        let intern = new Intern(name, id, email, school)
+                        employees.push(intern)
                         addNewEmployee();
                     }
                 )
@@ -106,7 +108,7 @@ function addEmployee() {
             if (addNewEmployee) {
                 addEmployee()
             } else {
-                render();
+                render(employees);
             }
         }
     )

@@ -6,41 +6,16 @@ const Manager = require('../lib/manager');
 function render(employees){
     let cardStack = "";
 
-    for(Manager of employees){
+    for(employee of employees){
         cardStack+=
         `
         <div class="card">
-            <h2 class="card-name">${employees.name}</h2>
-            <h3 class="card-role">${employees.role}</h3>
-            <ul class="card-details">Employee ID: ${employees.id}</ul>
-            <ul class="card-details">Office Number: ${employees.officeNumber}</ul>
-            <ul class="card-details">Email: <a href="mailto:${employees.email}">${employees.email}</a></ul>
-        </div>
-        `
-    }
-
-    for(Engineer of employees){
-        cardStack+=
-        `
-        <div class="card">
-            <h2 class="card-name">${employees.name}</h2>
-            <h3 class="card-role">${employees.role}</h3>
-            <ul class="card-details">Employee ID: ${employees.id}</ul>
-            <ul class="card-details">Email: <a href="mailto:${employees.email}">${employees.email}</a></ul>
-            <ul class="card-details">GitHub: <a href="https://github.com/${employees.github}" target="_blank">${employees.github}</a></ul>
-        </div>
-        `
-    }
-
-    for(Intern of employees){
-        cardStack+=
-        `
-        <div class="card">
-            <h2 class="card-name">${employees.name}</h2>
-            <h3 class="card-role">${employees.role}</h3>
-            <ul class="card-details">Employee ID: ${employees.id}</ul>
-            <ul class="card-details">School: ${employees.school}</ul>
-            <ul class="card-details">Email: <a href="mailto:${employees.email}">${employees.email}</a></ul>
+            <h2 class="card-name">${employee.name}</h2>
+            <h3 class="card-role">${employee.role}</h3>
+            <ul class="card-details">Employee ID: ${employee.id}</ul>
+            ${employee.officeNumber?`<ul class="card-details">Office Number: ${employee.officeNumber}</ul>`:""}
+            <ul class="card-details">Email: <a href="mailto:${employee.email}">${employee.email}</a></ul>
+            ${/**add schools and other stuff here */""}
         </div>
         `
     }
@@ -71,7 +46,9 @@ function render(employees){
 </html>
     `
 
-fs.writeFile('../dist/index.html', finalHTML)
+fs.writeFile('./dist/index.html', finalHTML,function(err){
+    if (err) throw err;
+})
 
 }
 
